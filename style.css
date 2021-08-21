@@ -8,7 +8,8 @@ ul {
 }
 
 ul li {
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
+    position: relative;
 }
 
 li a{
@@ -27,7 +28,21 @@ li a.active {
 li a:hover {
     background-color: #515151;
     color: #fff;
-    transition: background-color 0.3s;
-    border-bottom: 5px solid #44b5b5;
+}
+
+.submenu {
+    flex-flow: column;
+    position: absolute;
+    display: none;
+}
+
+nav li:hover > a {
+    background-color: #515151;
+    color: white;
+}
+
+nav li:hover ul {
+    display: block;
+    min-width: 150px;
 }
 
