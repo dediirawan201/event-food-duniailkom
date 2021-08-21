@@ -1,0 +1,32 @@
+nav {
+    width: 200px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+ul li {
+    background-color: #f1f1f1
+}
+
+li a{
+    color: #515151;
+    text-decoration: none;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    display: block;
+}
+
+li a.active {
+    background-color: #44b5b5;
+}
+
+li a:hover {
+    background-color: #515151;
+    color: #fff;
+}
+
