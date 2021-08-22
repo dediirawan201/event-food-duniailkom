@@ -1,36 +1,125 @@
+* {
+    box-sizing: border-box;
+}
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #3c4542;
+    position: relative;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 120px;
+    padding-top: 10px;
+}
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-ul li {
+/* ul li {
     background-color: #f1f1f1;
     position: relative;
-}
+} */
 
 li a{
-    color: #515151;
+    color: white;
     text-decoration: none;
-    padding: 1em 2em;
+    padding: 0 2em;
     text-transform: uppercase;
     display: block;
-    border-bottom: 5px solid #f1f1f1;
+    text-decoration: none;
+    height: 60px;
+    line-height: 60px;
 }
 
 li a.active {
-    background-color: #44b5b5;
+    color: #ff5c5c;
+    transition: all 0.3s;
+    border-bottom: 5px solid #ff5c5c;
 }
 
 li a:hover {
     background-color: #515151;
-    color: #fff;
+    color: #ff5c5c;
+    transition: all 0.3s;
+    border-bottom: 5px solid #ff5c5c;
 }
 
-.submenu {
+/* sembunyikan hamburger  icon  */
+header label, #hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* tampilkan hamburger icon  */
+    header label {
+        display: inline-block;
+        color: white;
+        font-style: normal;
+        font-size: 2rem;
+        padding: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    /* susun ulang menjadi vertikal */
+    header {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    li a {
+        display: block;
+        color: white;
+        background-color: #3c4542;
+        padding: 0 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        height: auto;
+    }
+    li a:hover {
+        color: #ff5c5c;
+        border-bottom: none;
+    }
+
+    /* pindahkan posisi logo ke kanan, lalu dikecilkan */
+    .logo {
+        position: absolute;
+        right: 20px;
+        z-index: 1000;
+    }
+    .logo img {
+        width: 80px;
+    }
+
+    /* untuk menampilkan/menyembunyikan menu  */
+    nav {display: none;}
+    header input:checked ~ nav {
+        display: flex;
+    }
+}
+/* .submenu {
     flex-flow: column;
     position: absolute;
     display: none;
@@ -44,5 +133,5 @@ nav li:hover > a {
 nav li:hover ul {
     display: block;
     min-width: 150px;
-}
+} */
 
