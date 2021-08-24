@@ -135,3 +135,79 @@ nav li:hover ul {
     min-width: 150px;
 } */
 
+/* hero  */
+.hero-container {
+    background-image: url("img/hero.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    margin: 0px;
+    text-shadow: 4px 4px black;
+}
+
+.hero-text p {
+    font-size: 2em;
+    margin: 0px;
+    text-shadow: 2px 2px black;
+}
+
+.hero-text a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.3em;
+    padding: 0.7em 1.2em;
+    background-color: orangered;
+    color: white;
+    box-shadow: 5px 5px black;
+    font-size: 1.1em;
+}
+
+.hero-text a:hover{
+    background-color: #ff6933;
+}
+
+/* showcase */
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: white;
+}
+
+.showcase-image, .showcase-text{
+    width: 50%;
+    margin: 1em;
+}
+
+.showcase-image img {
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0.3rem;
+    box-shadow: 2px 2px 5px black;
+}
+
+@media screen and (max-width: 768px){
+    .showcase {
+        flex-direction: column;
+        padding: 1em 2em;
+    }
+    .showcase-image, .showcase-text{
+        width: auto;
+    }
+}
