@@ -183,6 +183,7 @@ nav li:hover ul {
 /* showcase */
 .showcase {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 1100px;
     margin: 0 auto;
@@ -209,5 +210,47 @@ nav li:hover ul {
     }
     .showcase-image, .showcase-text{
         width: auto;
+    }
+}
+
+/* PRODUCT AND SERVICES  */
+.product-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.product-container hr {
+    width: 25%;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.product-container section {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+section div {
+    width: 25%;
+    padding: 1em 2em;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .product-service div {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 461px) {
+    .product-service div {
+        width: 100%;
     }
 }
