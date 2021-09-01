@@ -254,3 +254,60 @@ header h1 {
         width: 100%;
     }
 }
+
+/* update blog  */
+
+.blog-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+}
+.blog-container .headerku { 
+    padding: 0 2em;
+    text-align: center;
+}
+.blog-container .headerku  hr {
+    width: 25%;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+.blog-index {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.blog-index .snippet{
+    width: 32%;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+.blog-index .snippet-img {
+    width: 100%;
+}
+
+.blog-index .snippet-txt {
+    padding: 0 1em;
+}
+
+.snippet-txt small {
+    color: #999;
+}
+
+@media screen and (max-width: 768px){
+    .blog-container .snippet {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .blog-container .snippet {
+        width: 98%;
+    }
+    .blog-index{
+        justify-content: center;
+    }
+}
